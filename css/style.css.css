@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<p>/* Cyberpunk Neon Theme */<br />
+  :root {<br />
+  --neon-cyan: #00f3ff;<br />
+  --neon-purple: #b967ff;<br />
+  --dark-bg: #0a0a12;<br />
+  --text-glow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan);<br />
+  }</p>
+<p>* {<br />
+  margin: 0;<br />
+  padding: 0;<br />
+  box-sizing: border-box;<br />
+  }</p>
+<p>body {<br />
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;<br />
+  background-image: url('../images/background.jpg');<br />
+  background-size: cover;<br />
+  background-position: center;<br />
+  background-attachment: fixed;<br />
+  background-repeat: no-repeat;<br />
+  min-height: 100vh;<br />
+  color: white;<br />
+  position: relative;<br />
+  overflow-x: hidden;<br />
+  }</p>
+<p>.background-overlay {<br />
+  position: fixed;<br />
+  top: 0;<br />
+  left: 0;<br />
+  width: 100%;<br />
+  height: 100%;<br />
+  background: rgba(10, 10, 18, 0.85);<br />
+  z-index: -1;<br />
+  }</p>
+<p>header {<br />
+  display: flex;<br />
+  flex-direction: column;<br />
+  align-items: center;<br />
+  justify-content: center;<br />
+  min-height: 100vh;<br />
+  text-align: center;<br />
+  padding: 2rem;<br />
+  }</p>
+<p>.logo {<br />
+  max-width: 200px;<br />
+  width: 100%;<br />
+  height: auto;<br />
+  margin-bottom: 2rem;<br />
+  transition: transform 0.3s ease, filter 0.3s ease;<br />
+  filter: drop-shadow(0 0 8px var(--neon-cyan));<br />
+  }</p>
+<p>.logo:hover {<br />
+  transform: scale(1.05);<br />
+  filter: drop-shadow(0 0 15px var(--neon-cyan));<br />
+  }</p>
+<p>h1 {<br />
+  font-size: 2.8rem;<br />
+  font-weight: 700;<br />
+  letter-spacing: 2px;<br />
+  text-transform: uppercase;<br />
+  color: var(--neon-cyan);<br />
+  text-shadow: var(--text-glow);<br />
+  margin-top: 1rem;<br />
+  animation: neon-pulse 2s infinite alternate;<br />
+  }</p>
+<p>/* Responsive adjustments */<br />
+  @media (max-width: 768px) {<br />
+  h1 {<br />
+  font-size: 2.2rem;<br />
+  letter-spacing: 1px;<br />
+  }<br />
+  <br />
+  .logo {<br />
+  max-width: 160px;<br />
+  }<br />
+  }</p>
+<p>@media (max-width: 480px) {<br />
+  h1 {<br />
+  font-size: 1.8rem;<br />
+  }<br />
+  <br />
+  .logo {<br />
+  max-width: 140px;<br />
+  }<br />
+  }</p>
+<p>/* Neon pulse animation */<br />
+  @keyframes neon-pulse {<br />
+  from {<br />
+  text-shadow: var(--text-glow);<br />
+  }<br />
+  to {<br />
+  text-shadow: <br />
+  0 0 15px var(--neon-cyan), <br />
+  0 0 30px var(--neon-cyan),<br />
+  0 0 40px var(--neon-purple);<br />
+  }<br />
+  }</p>
+<p>/* Accessibility focus styles */<br />
+  .logo:focus {<br />
+  outline: 2px solid var(--neon-purple);<br />
+  outline-offset: 4px;<br />
+  }</p>
+
+</body>
+</html>
